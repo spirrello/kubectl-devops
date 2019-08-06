@@ -6,12 +6,11 @@ import sys
 
 
 """
-Quick/dirty script for scaling deployments in all or individual namespaces.
+Quick/dirty script for backing up a namespace before deleting it.
 Arguments:
-ns     Specify which namespace you wish to scale deployments.  If no namespace is entered,
-       all namespaces will be in scopeself.  They can be comma delimited.
-replicas  Number of pods to scale each deployment to.  Default is 0.
-time   Amount of time to pause in between scaling executions.  Default is 10 seconds.
+dir     Directory to backup configs to.
+ns      Namespace to backup.
+time    Amount of time to pause in between scaling executions.  Default is 10 seconds.
 """
 
 def getNamespaces():
